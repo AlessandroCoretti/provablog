@@ -144,7 +144,7 @@ const Blog = () => {
               </p>
               <h1 style={{
                 fontFamily: 'var(--font-display)', fontWeight: 800,
-                fontSize: 'clamp(3rem, 6.5vw, 6.5rem)',
+                fontSize: 'var(--fs-h1)',
                 lineHeight: 0.92, letterSpacing: '-0.04em',
               }}>
                 <span className="blog-h1-1" style={{ display: 'block', color: 'var(--text-primary)' }}>

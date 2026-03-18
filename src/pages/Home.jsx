@@ -148,7 +148,7 @@ const Home = () => {
         {/* Grainient — fullscreen background */}
         <Grainient
           color1="#373437"
-          color2="#00ff7f"
+          color2="#00a855"
           color3="#024523"
           grainAmount={0.08}
           warpStrength={1.2}
@@ -180,7 +180,7 @@ const Home = () => {
           maxWidth: 900,
         }}>
           {/* Eyebrow */}
-          <p className="hero-eyebrow section-label" style={{ marginBottom: 28, justifyContent: 'center' }}>
+          <p className="hero-eyebrow section-label" style={{ marginBottom: 28, justifyContent: 'center', color: 'rgba(255,255,255,0.65)' }}>
             <span style={{ width: 16, height: 1, background: 'var(--accent)', display: 'inline-block' }} />
             SUPERINTELLIGENZA BLOG
           </p>
@@ -189,7 +189,7 @@ const Home = () => {
           <h1 style={{
             fontFamily: 'var(--font-display)',
             fontWeight: 800,
-            fontSize: 'clamp(3.2rem, 7vw, 7rem)',
+            fontSize: 'var(--fs-h1)',
             lineHeight: 0.9,
             letterSpacing: '-0.05em',
             color: 'var(--text-primary)',
@@ -209,7 +209,7 @@ const Home = () => {
           {/* Subtitle */}
           <p className="hero-sub" style={{
             fontSize: 'clamp(0.875rem, 1.2vw, 1.05rem)', fontWeight: 300, lineHeight: 1.75,
-            color: 'var(--text-secondary)', maxWidth: 440, marginBottom: 40,
+            color: 'rgba(255,255,255,0.72)', maxWidth: 440, marginBottom: 40,
           }}>
             Insights, analisi e visioni dal futuro digitale.
             Dove il pensiero incontra la macchina.
@@ -344,7 +344,7 @@ const Home = () => {
 
               <h2 style={{
                 fontFamily: 'var(--font-display)', fontWeight: 800,
-                fontSize: 'clamp(1.4rem, 2.5vw, 2.2rem)',
+                fontSize: 'var(--fs-h3)',
                 lineHeight: 1.1, letterSpacing: '-0.03em',
                 color: 'var(--text-primary)',
               }}>
@@ -408,7 +408,7 @@ const Home = () => {
             </p>
             <h2 style={{
               fontFamily: 'var(--font-display)', fontWeight: 800,
-              fontSize: 'clamp(2rem, 4vw, 3.8rem)',
+              fontSize: 'var(--fs-h2)',
               lineHeight: 1.0, letterSpacing: '-0.035em',
               color: 'var(--text-primary)',
             }}>
@@ -426,6 +426,17 @@ const Home = () => {
       <div style={{ height: 80 }} />
 
       <style>{`
+        .hero-section .pill-btn {
+          color: rgba(255,255,255,0.75);
+          border-color: rgba(255,255,255,0.22);
+        }
+        .hero-section .pill-btn:hover {
+          color: var(--accent);
+          border-color: var(--accent-border);
+        }
+        .hero-section .hero-scroll {
+          color: rgba(255,255,255,0.45) !important;
+        }
         @media (max-width: 767px) {
           .featured-card { grid-template-columns: 1fr !important; }
           .cta-grid { grid-template-columns: 1fr !important; }

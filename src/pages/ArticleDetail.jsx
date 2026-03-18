@@ -137,7 +137,7 @@ const ArticleDetail = () => {
 
             <h1 className="reveal-content" style={{
               fontFamily: 'var(--font-display)', fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 3.8vw, 3.4rem)',
+              fontSize: 'var(--fs-h1)',
               lineHeight: 1.05, letterSpacing: '-0.03em',
               color: 'var(--text-primary)', marginBottom: 28,
             }}>
@@ -236,7 +236,7 @@ const ArticleDetail = () => {
           }}>
             <h2 style={{
               fontFamily: 'var(--font-display)', fontWeight: 800,
-              fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
+              fontSize: 'var(--fs-h2)',
               lineHeight: 1.0, letterSpacing: '-0.03em',
               color: 'var(--text-primary)',
             }}>
