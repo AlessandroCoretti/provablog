@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Logo from './Logo';
 
 const Navbar = () => {
   const location  = useLocation();
@@ -35,25 +36,8 @@ const Navbar = () => {
     }}>
 
       {/* Logo */}
-      <Link to="/" className="interactive" style={{ display: 'inline-flex', alignItems: 'baseline', gap: 1 }}>
-        <span style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 16,
-          fontWeight: 800,
-          color: 'var(--text-primary)',
-          letterSpacing: '-0.03em',
-        }}>
-          Super
-        </span>
-        <span style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: 16,
-          fontWeight: 800,
-          color: 'var(--accent)',
-          letterSpacing: '-0.03em',
-        }}>
-          intelligenza
-        </span>
+      <Link to="/" className="interactive" style={{ display: 'inline-flex', alignItems: 'center' }}>
+        <Logo size={34} />
       </Link>
 
       {/* Center nav */}

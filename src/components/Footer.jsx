@@ -1,7 +1,6 @@
-import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
-import FooterStickman from './FooterStickman';
+import Silk from './Silk';
 
 const sitemapLinks = [
   { label: 'HOME',     to: '/' },
@@ -13,15 +12,20 @@ const legalLinks = ['PRIVACY_POLICY', 'COOKIE_POLICY', 'CONTACT_US'];
 const socialIcons = [Instagram, Linkedin, Twitter];
 
 const Footer = () => {
-  const footerRef = useRef(null);
   return (
-  <footer ref={footerRef} style={{
+  <footer style={{
     borderTop: '1px solid var(--border-light)',
     paddingTop: 72, paddingBottom: 0,
     position: 'relative',
+    overflow: 'hidden',
   }}>
-    <FooterStickman footerRef={footerRef} />
-    <div className="container-bliss">
+    {/* Silk background */}
+    <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+      <Silk color="#007a3d" speed={4} scale={1.2} noiseIntensity={1.5} rotation={0} />
+    </div>
+    {/* Dark overlay per leggibilità */}
+    <div style={{ position: 'absolute', inset: 0, zIndex: 0, background: 'rgba(0,0,0,0.72)', pointerEvents: 'none' }} />
+    <div style={{ position: 'relative', zIndex: 1 }} className="container-bliss">
 
       {/* Top */}
       <div style={{
